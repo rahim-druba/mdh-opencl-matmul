@@ -8,7 +8,7 @@ Generating optimized OpenCL GPU kernels for **Matrix Multiplication** using the 
 S[L1, L2] = sum_R1( Z[L1, R1] × W[L2, R1] )
 ```
 
-Pure matrix multiplication — no bias, no activation function.
+Pure matrix multiplication - no bias, no activation function.
 
 ## Related
 
@@ -21,8 +21,8 @@ Pure matrix multiplication — no bias, no activation function.
 
 ```
 input/matmul.cpp          # MDH specification for matrix multiplication
-generated/matmul_1.cl     # Generated OpenCL kernel 1 — tiled multiply phase
-generated/matmul_2.cl     # Generated OpenCL kernel 2 — reduction phase
+generated/matmul_1.cl     # Generated OpenCL kernel 1 - tiled multiply phase
+generated/matmul_2.cl     # Generated OpenCL kernel 2 - reduction phase
 implemented.md            # Full step-by-step log of how this was generated
 proof.md                  # Comparison with MLP kernel proving correctness
 steps.md                  # Commands to re-generate the kernels yourself
@@ -32,7 +32,7 @@ steps.md                  # Commands to re-generate the kernels yourself
 
 The `matmul.cpp` spec file was fed into the MDH OpenCL generator from the upstream repo.
 The generator produced two kernel files encoding every possible tiling and work-group
-configuration as preprocessor branches — selected at OpenCL compile time via `-D` flags
+configuration as preprocessor branches - selected at OpenCL compile time via `-D` flags
 for optimal performance on any GPU.
 
 See `implemented.md` for the full step-by-step process and `steps.md` to reproduce it.
