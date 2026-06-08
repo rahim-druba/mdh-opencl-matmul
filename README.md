@@ -12,7 +12,7 @@ Pure matrix multiplication - no bias, no activation function.
 
 ## Related
 
-- **MLP version (previous work):** https://github.com/rahim-druba/mdh-opencl-generator-test
+- **MLP version (previous work):** https://github.com/rahim-druba/mdh-opencl-code-generation-test.git
   - The MLP forward pass (`S = σ(Z × W + B)`) was generated there. This repo extends that work to plain matrix multiplication.
 - **Original upstream generator:** https://gitlab.com/mdh-project/pact_2019_artifact
   - PACT 2019 artifact by Rasch, Schulze, Gorlatch.
